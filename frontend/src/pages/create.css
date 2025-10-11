@@ -1,0 +1,81 @@
+.create-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.create-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(15,23,42,0.06);
+  border: 1px solid rgba(15,23,42,0.04);
+  margin-top: 80px;
+}
+
+.create-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.create-form input,
+.create-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(15,23,42,0.08);
+  margin-bottom: 12px;
+}
+
+.create-actions { display:flex; gap:8px; align-items:center }
+
+/* small responsive tweak */
+@media (max-width: 520px) {
+  .create-card { padding: 12px; }
+}
+.create-container {
+    background-color: blue;
+    padding: 20px;
+}
+
+.create-topbar-container {
+    background-color: blue;
+    padding: 10px;
+    border: none;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.create-topbar{
+     position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    height:64px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between; 
+    background:#0b5cff; 
+    color:#fff; 
+    padding:0 4px; 
+    box-shadow: 0 6px 18px rgba(11,92,255,0.12); 
+    z-index:40; 
+}
+.homebtn{ 
+    border:none;  
+    padding:6px; 
+    border-radius:8px; 
+    cursor:pointer;
+    display:inline-block; 
+    background:#0b5cff; 
+    color:white; 
+    padding:8px 14px; 
+    border-radius:8px; 
+    text-decoration:none; 
+    font-weight:700;
+    font-size:20px;
+
+}
