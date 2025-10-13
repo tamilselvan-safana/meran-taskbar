@@ -33,7 +33,7 @@ export default function Edit() {
     e.preventDefault()
     setSaving(true)
     try {
-      const res = await fetch(`http://localhost:5000/api/tasks/${id}`, {
+      const res = await fetch(`api/tasks/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ title, description , to_completed: dueDate ? new Date(dueDate) : null })

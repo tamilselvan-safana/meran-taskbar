@@ -8,7 +8,7 @@ export default function TaskCard({ task, onToggleParent, onDelete: onDeleteParen
     const newState = { is_completed: !task.is_completed }
     setSaving(true)
     try {
-      const res = await fetch(`http://localhost:5000/api/tasks/${task._id || task.id}`, {
+      const res = await fetch(`api/tasks/${task._id || task.id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newState)
@@ -24,7 +24,7 @@ export default function TaskCard({ task, onToggleParent, onDelete: onDeleteParen
     if (!confirm('Delete this task? This cannot be undone.')) return
     setSaving(true)
     try {
-      const res = await fetch(`http://localhost:5000/api/tasks/${task._id || task.id}`, { method: 'DELETE' })
+      const res = await fetch(`api/tasks/${task._id || task.id}`, { method: 'DELETE' })
       if (!res.ok) throw new Error('Failed to delete')
       if (typeof onDeleteParent === 'function') onDeleteParent(task._id || task.id)
     } catch (e) {

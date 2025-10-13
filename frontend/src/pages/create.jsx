@@ -18,7 +18,7 @@ function Create() {
     }
     setLoading(true)
     try {
-      const res = await fetch('http://localhost:5000/api/tasks', {
+      const res = await fetch('/api/tasks', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ title, description, to_completed: dueDate ? new Date(dueDate) : null })
