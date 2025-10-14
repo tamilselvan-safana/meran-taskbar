@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-  "install-all": "npm install --prefix backend && npm install --prefix frontend",
-  "dev": "concurrently \"npm start --prefix backend\" \"npm run dev --prefix frontend\"",
-  "build": "npm run install-all && npm install --only=dev --prefix frontend && npm run build --prefix frontend && cross-env NODE_ENV=production npm start --prefix backend",
-  "start": "cross-env NODE_ENV=production npm start --prefix backend"
-}
-  ,
+    "install-all": "npm install --prefix backend && npm install --prefix frontend",
+    "dev": "concurrently \"npm start --prefix backend\" \"npm run dev --prefix frontend\"",
+    "build": "npm run install-all && npm run build --prefix frontend",
+    "start": "cd backend && node server/app.js"
+  },
   "devDependencies": {
     "concurrently": "^8.2.0",
     "cross-env": "^10.1.0"
